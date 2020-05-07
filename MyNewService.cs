@@ -55,6 +55,11 @@ namespace MyNewService
             eventLog1.WriteEntry("In OnStop");
         }
 
+        protected override void OnShutdown()
+        {
+            eventLog1.WriteEntry("In OnShutdown");
+        }
+
         public void OnTimer(object sender, ElapsedEventArgs args)
         {
             // TODO: Insert monitoring activities here.
